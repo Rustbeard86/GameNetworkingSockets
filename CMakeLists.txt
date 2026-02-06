@@ -115,6 +115,10 @@ if (USE_CRYPTO STREQUAL "OpenSSL")
 			list(APPEND CMAKE_REQUIRED_LIBRARIES ws2_32 crypt32)
 		endif()
 		include(CheckCXXSourceCompiles)
+		set(CMAKE_REQUIRED_LIBRARIES OpenSSL::Crypto)
+		if(WIN32 AND OPENSSL_USE_STATIC_LIBS)
+			list(APPEND CMAKE_REQUIRED_LIBRARIES ws2_32 crypt32)
+		endif()
 		check_cxx_source_compiles("
 			#include <openssl/evp.h>
 			int main() {
