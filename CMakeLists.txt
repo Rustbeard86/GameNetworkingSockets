@@ -114,7 +114,15 @@ if (USE_CRYPTO STREQUAL "OpenSSL")
 		if(WIN32 AND OPENSSL_USE_STATIC_LIBS)
 			list(APPEND CMAKE_REQUIRED_LIBRARIES ws2_32 crypt32)
 		endif()
-		check_symbol_exists(EVP_MD_CTX_free openssl/evp.h OPENSSL_NEW_ENOUGH)
+		include(CheckCXXSourceCompiles)
+		check_cxx_source_compiles("
+			#include <openssl/evp.h>
+			int main() {
+				EVP_MD_CTX* ctx = EVP_MD_CTX_new();
+				EVP_MD_CTX_free(ctx);
+				return 0;
+			}
+		" OPENSSL_NEW_ENOUGH)
 		if (NOT OPENSSL_NEW_ENOUGH)
 			message(FATAL_ERROR "Cannot find EVP_MD_CTX_free in OpenSSL headers/libs for the target architecture.  Check that you're using OpenSSL 1.1.0 or later.")
 		endif()
