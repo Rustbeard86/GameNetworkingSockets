@@ -72,6 +72,7 @@ To get an idea of what the API is like, here are a few things to check out:
 
 Comprehensive guides are available to help you understand and use GameNetworkingSockets:
 
+* **[Documentation Index](DOCUMENTATION_INDEX.md)** - Complete guide to all documentation with quick reference
 * **[Implementation Guide](IMPLEMENTATION_GUIDE.md)** - Deep dive into how the library works
   internally, including the SNP protocol, reliability layer, security, and P2P connectivity
 * **[Integration Guide](INTEGRATION_GUIDE.md)** - Step-by-step instructions for integrating
