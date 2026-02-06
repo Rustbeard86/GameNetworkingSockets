@@ -68,6 +68,17 @@ To get an idea of what the API is like, here are a few things to check out:
     to each other using P2P connectivity.  Also an example of how to write a
     signaling service plugin.
 
+## Documentation
+
+Comprehensive guides are available to help you understand and use GameNetworkingSockets:
+
+* **[Implementation Guide](IMPLEMENTATION_GUIDE.md)** - Deep dive into how the library works
+  internally, including the SNP protocol, reliability layer, security, and P2P connectivity
+* **[Integration Guide](INTEGRATION_GUIDE.md)** - Step-by-step instructions for integrating
+  GameNetworkingSockets into your game, with code examples and best practices
+* **[Static Library Guide](STATIC_LIBRARY_GUIDE.md)** - How to build and use GameNetworkingSockets
+  as a static library in your project
+
 ## Building
 
 See [BUILDING](BUILDING.md) for more information.
