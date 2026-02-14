@@ -20,6 +20,8 @@ CMakeCache.txt
 CMakeFiles
 Makefile
 cmake_install.cmake
+build_cmake/
+build_cmake_x86/
 
 # Ignore outputs from "perf record"
 perf.data
